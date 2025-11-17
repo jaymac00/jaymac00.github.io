@@ -7,14 +7,17 @@
 	</head>
 	<body>
 
-		<h1>Twilight Imperium IV Reference Hub</h1>
-		<p>A work in progress - not affiliated with Fantasy Flight Games, this is just a personal project.</p>
-		<br>
+		<div class="mainHeader">
+			<h1>Twilight Imperium IV Reference Hub</h1>
+			<p>A work in progress - not affiliated with Fantasy Flight Games, this is just a personal project.</p>
+		</div>
 
-		<button id="promissoriesButton">Promissory Notes</button>
-		<button id="strategiesButton">Strategy Cards</button>
-		<button id="technologiesButton">Technologies</button>
-		<button id="unitsButton">Units</button>
+		<div class="mainTabs">
+			<button id="promissoriesButton">Promissory Notes</button>
+			<button id="strategiesButton">Strategy Cards</button>
+			<button id="technologiesButton">Technologies</button>
+			<button id="unitsButton">Units</button>
+		</div>
 		<br>
 
 		<script type="module" src="dictionary.js"></script>
@@ -32,9 +35,10 @@
 			unitsButton.addEventListener('click', populateUnits);
 		</script>
 
-		<h2 id="title"></h2>
-		<div id="content"></div>
-		<br>
+		<div class="pageContent">
+			<h2 id="title"></h2>
+			<div id="content"></div>
+		</div>
 
 	</body>
 </html>
