@@ -8,6 +8,7 @@ export function populatePromissories() {
 		var txt = "";
 		txt += "<h3 class=\"promissoryHeader\">" + promissories[promissory]["name"] + "</h3>";
 		txt += "<p class=\"promissoryBody\">" + promissories[promissory]["desc"] + "</p>";
+		txt += "<br>";
 		document.getElementById("content").innerHTML += txt;
 	}
 
@@ -20,11 +21,14 @@ export function populateStrategies() {
 	document.getElementById("content").innerHTML = "";
 	for (const strategy in strategies){
 		var txt = "";
-		txt += "<h3 class=\"strategyHeader\">" + strategies[strategy]["priority"] + " - " + strategies[strategy]["name"] + "</h3>";
+		txt += "<div class=\"strategies\">";
+		txt += "<h3 class=\"strategyHeader\" style=\"background-color:" + strategies[strategy]["color"] + ";\">" + strategies[strategy]["priority"] + " - " + strategies[strategy]["name"] + "</h3>";
+		txt += "<div class=\"strategyActions\">";
 		txt += "<h4 class=\"primaryHeader\">Primary</h4>";
 		txt += "<p class=\"primaryBody\">" + strategies[strategy]["primary"] + "</p>";
 		txt += "<h4 class=\"secondaryHeader\">Secondary</h4>";
 		txt += "<p class=\"secondaryBody\">" + strategies[strategy]["secondary"] + "</p>";
+		txt += "</div></div><br>";
 		document.getElementById("content").innerHTML += txt;
 	}
 
@@ -48,6 +52,7 @@ export function populateTechnologies() {
 				txt += "<p class=\"technologyBody\">" + technologies[type][technology]["desc"] + "</p>";
 			}
 		}
+		txt += "<br>";
 		document.getElementById("content").innerHTML += txt;
 	}
 
@@ -82,6 +87,7 @@ export function populateUnits() {
 			}
 			txt += "<p class=\"unitUpgradeBody\">cost: " + units[unit]["upgrade"]["cost"] + " | combat: " + units[unit]["upgrade"]["combat"] + " | move: " + units[unit]["upgrade"]["move"] + " | capacity: " + units[unit]["upgrade"]["capacity"] + "</p>";
 		}
+		txt += "<br>";
 		document.getElementById("content").innerHTML += txt;
 	}
 

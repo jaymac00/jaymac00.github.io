@@ -31,48 +31,56 @@ export const strategies = {
 	leadership:{
 		name:"Leadership",
 		priority:"1",
+		color:"rgba(255, 0, 0, 0.3)",
 		primary:"Gain 3 command tokens.<br>Spend any amount of influence to gain 1 command token for every 3 influence spent.",
 		secondary:"Spend any amount of influence to gain 1 command token for every 3 influence."
 	},
 	diplomacy:{
 		name:"Diplomacy",
 		priority:"2",
+		color:"rgba(255, 127, 0, 0.3)",
 		primary:"Choose 1 system other than the Mecatol Rex system that contains a planet you control; each other player places a command token from their reinforcements in that system. Then ready up to 2 exhausted planets you control.",
 		secondary:"Spend 1 token from your strategy pool to ready up to 2 exhausted planets you control."
 	},
 	politics:{
 		name:"Politics",
 		priority:"3",
+		color:"rgba(255, 255, 0, 0.3)",
 		primary:"Choose a player other than the speaker. That player gains the speaker token.<br>Draw 2 action cards.<br>Look at the top 2 cards of the agenda deck. Place each card on the top or bottom of the deck in any order.",
 		secondary:"Spend 1 token from your strategy pool to draw 2 action cards."
 	},
 	construction:{
 		name:"Construction",
 		priority:"4",
+		color:"rgba(0, 255, 0, 0.3)",
 		primary:"Either place 1 structure on a planet you control or use the PRODUCTION ability of 1 of your space docks.<br>Place 1 structure on a planet you control.",
 		secondary:"Spend 1 token from your strategy pool to place 1 structure on a planet you control."
 	},
 	trade:{
 		name:"Trade",
 		priority:"5",
+		color:"rgba(0, 255, 255, 0.3)",
 		primary:"Gain 3 trade goods.<br>Replenish commodities.<br>Choose any number of other players. Those players use the secondary ability of this strategy card without spending a command token.",
 		secondary:"Spend 1 token from your strategy pool to replenish commodities."
 	},
 	warfare:{
 		name:"Warfare",
 		priority:"6",
+		color:"rgba(0, 0, 255, 0.3)",
 		primary:"Perform a tactical action in any system without placing a command token, even if the system already has your command token in it; that system still counts as being activated. You may redistribute your command tokens before and after this action.",
 		secondary:"Spend 1 token from your strategy pool to use the PRODUCTION abilities of the units in your home system."
 	},
 	technology:{
 		name:"Technology",
 		priority:"7",
+		color:"rgba(0, 0, 127, 0.3)",
 		primary:"Research 1 technology.<br>Spend 6 resources to research 1 technology.",
 		secondary:"Spend 1 token from your strategy pool and 4 resources to research 1 technology."
 	},
 	imperial:{
 		name:"Imperial",
 		priority:"8",
+		color:"rgba(127, 0, 127, 0.3)",
 		primary:"Immediately score 1 public objective if you fulfill its requirements.<br>Gain 1 Victory Point if you control Mecatol Rex; otherwise, draw 1 secret objective.",
 		secondary:"Spend 1 token from your strategy pool to draw 1 secret objective."
 	}
