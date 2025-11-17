@@ -2,24 +2,39 @@
 <html>
 	<head>
 		<title>TI4 Reference</title>
+
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
+
 		<h1>Twilight Imperium IV Reference Hub</h1>
 		<p>A work in progress - not affiliated with Fantasy Flight Games, this is just a personal project.</p>
-		
-		<h2>Promissory Notes</h2>
-		<div id="promissories"></div>
-		
-		<h2>Strategy Cards</h2>
-		<div id="strategies"></div>
-		
-		<h2>Technologies</h2>
-		<div id="technologies"></div>
-		
-		<h2>Units</h2>
-		<div id="units"></div>
-		
+		<br>
+
+		<button id="promissoriesButton">Promissory Notes</button>
+		<button id="strategiesButton">Strategy Cards</button>
+		<button id="technologiesButton">Technologies</button>
+		<button id="unitsButton">Units</button>
+		<br>
+
 		<script type="module" src="dictionary.js"></script>
-		<script type="module" src="script.js"></script>
+		<script type="module" src="functions.js"></script>
+		<script type="module">
+			import { populatePromissories, populateStrategies, populateTechnologies, populateUnits } from './functions.js';
+	
+			const promissoriesButton = document.getElementById('promissoriesButton');
+			promissoriesButton.addEventListener('click', populatePromissories);
+			const strategiesButton = document.getElementById('strategiesButton');
+			strategiesButton.addEventListener('click', populateStrategies);
+			const technologiesButton = document.getElementById('technologiesButton');
+			technologiesButton.addEventListener('click', populateTechnologies);
+			const unitsButton = document.getElementById('unitsButton');
+			unitsButton.addEventListener('click', populateUnits);
+		</script>
+
+		<h2 id="title"></h2>
+		<div id="content"></div>
+		<br>
+
 	</body>
 </html>
