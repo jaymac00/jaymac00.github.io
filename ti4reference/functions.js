@@ -6,9 +6,10 @@ export function populatePromissories() {
 	document.getElementById("content").innerHTML = "";
 	for (const promissory in promissories){
 		var txt = "";
+		txt += "<div class=\"promissories\">";
 		txt += "<h3 class=\"promissoryHeader\">" + promissories[promissory]["name"] + "</h3>";
 		txt += "<p class=\"promissoryBody\">" + promissories[promissory]["desc"] + "</p>";
-		txt += "<br>";
+		txt += "</div><br>";
 		document.getElementById("content").innerHTML += txt;
 	}
 
@@ -41,18 +42,21 @@ export function populateTechnologies() {
 	document.getElementById("content").innerHTML = "";
 	for (const type in technologies){
 		var txt = "";
-		txt += "<h3 class=\"technologyHeader\">" + technologies[type]["type"] + "</h3>";
+		txt += "<div class=\"technologyType\">";
+		txt += "<h3 class=\"technologyHeader\" style=\"background-color:" + technologies[type]["color"] + ";\">" + technologies[type]["type"] + "</h3>";
 		for (const technology in technologies[type]){
-			if (technology != "type"){
+			if (technology != "type" && technology != "color"){
+				txt += "<div class=\"technologies\">";
 				if (technologies[type][technology]["prereq"] != "") {
 					txt += "<h4 class=\"technologyName\">" + technologies[type][technology]["name"] + " (Prerequisite: " + technologies[type][technology]["prereq"] + ")</h4>";
 				} else {
 					txt += "<h4 class=\"technologyName\">" + technologies[type][technology]["name"] + "</h4>";
 				}
 				txt += "<p class=\"technologyBody\">" + technologies[type][technology]["desc"] + "</p>";
+				txt += "</div>";
 			}
 		}
-		txt += "<br>";
+		txt += "</div><br>";
 		document.getElementById("content").innerHTML += txt;
 	}
 

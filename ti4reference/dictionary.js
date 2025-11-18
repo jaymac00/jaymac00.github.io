@@ -91,6 +91,7 @@ export const technologyKeys = ["propulsion","biotic","warfare","cybernetics"];
 export const technologies = {
 	propulsion:{
 		type:"Propulsion",
+		color:"rgba(0, 0, 255, 0.3)",
 		antimassDeflectors:{
 			name:"Antimass Deflectors",
 			prereq:"",
@@ -124,6 +125,7 @@ export const technologies = {
 	},
 	biotic:{
 		type:"Biotic",
+		color:"rgba(0, 255, 0, 0.3)",
 		neuralMotivator:{
 			name:"Neural Motivator",
 			prereq:"",
@@ -157,6 +159,7 @@ export const technologies = {
 	},
 	warfare:{
 		type:"Warfare",
+		color:"rgba(255, 0, 0, 0.3)",
 		plasmaScoring:{
 			name:"Plasma Scoring",
 			prereq:"",
@@ -190,6 +193,7 @@ export const technologies = {
 	},
 	cybernetics:{
 		type:"Cybernetics",
+		color:"rgba(255, 255, 0, 0.3)",
 		sarweenTools:{
 			name:"Sarween Tools",
 			prereq:"",
