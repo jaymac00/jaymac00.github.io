@@ -91,3 +91,25 @@ body {
 	border-bottom: 1px dashed black;
 	padding-bottom: 20px;
 }
+
+.units {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	padding-bottom: 15px;
+}
+
+.unitHeader {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.unitStats {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.unitUpgrade {
+	border-top: 1px dotted black;
+	padding-top: 20px;
+}

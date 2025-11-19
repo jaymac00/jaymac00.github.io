@@ -48,7 +48,7 @@ export function populateTechnologies() {
 			if (technology != "type" && technology != "color"){
 				txt += "<div class=\"technologies\">";
 				if (technologies[type][technology]["prereq"] != "") {
-					txt += "<h4 class=\"technologyName\">" + technologies[type][technology]["name"] + " (Prerequisite: " + technologies[type][technology]["prereq"] + ")</h4>";
+					txt += "<h4 class=\"technologyName\">" + technologies[type][technology]["name"] + " (Prerequisite - " + technologies[type][technology]["prereq"] + ")</h4>";
 				} else {
 					txt += "<h4 class=\"technologyName\">" + technologies[type][technology]["name"] + "</h4>";
 				}
@@ -69,7 +69,9 @@ export function populateUnits() {
 	document.getElementById("content").innerHTML = "";
 	for (const unit in units){
 		var txt = "";
+		txt += "<div class=\"units\">";
 		txt += "<h3 class=\"unitHeader\">" + units[unit]["name"] + " (" + units[unit]["type"] + ")</h3>";
+		txt += "<div class=\"unitStats\">";
 		if (units[unit]["abilities"].length > 0) {
 			for (const ability in units[unit]["abilities"]) {
 				txt += "<p class=\"unitAbilities\">" + units[unit]["abilities"][ability] + "</p>";
@@ -77,7 +79,7 @@ export function populateUnits() {
 		}
 		txt += "<p class=\"unitBody\">cost: " + units[unit]["cost"] + " | combat: " + units[unit]["combat"] + " | move: " + units[unit]["move"] + " | capacity: " + units[unit]["capacity"] + "</p>";
 		if (unit != "mech" && unit != "warSun") {
-			txt += "<p class=\"unitUpgrade\"><i>Upgrade to <b>" + units[unit]["upgrade"]["name"] + "</b>:</i></p>";
+			txt += "<p class=\"unitUpgrade\"><i>Upgrade to <b>" + units[unit]["upgrade"]["name"] + " (Prerequisite - " + units[unit]["upgrade"]["prereq"] + ")</b>:</i></p>";
 			if (units[unit]["upgrade"]["abilities"].length > 0) {
 				for (const ability in units[unit]["upgrade"]["abilities"]) {
 					txt += "<p class=\"unitUpgradeAbilities\">" + units[unit]["upgrade"]["abilities"][ability] + "</p>";
@@ -85,13 +87,13 @@ export function populateUnits() {
 			}
 			txt += "<p class=\"unitUpgradeBody\">cost: " + units[unit]["upgrade"]["cost"] + " | combat: " + units[unit]["upgrade"]["combat"] + " | move: " + units[unit]["upgrade"]["move"] + " | capacity: " + units[unit]["upgrade"]["capacity"] + "</p>";
 		} else if (unit == "warSun") {
-			txt += "<p class=\"unitUpgrade\"><i>Must research this unit's upgrade technology to produce this unit:</i></p>";
+			txt += "<p class=\"unitUpgrade\"><i>Must research <b>" + units[unit]["upgrade"]["name"] + " (Prerequisite - " + units[unit]["upgrade"]["prereq"] + ")</b>:</i></p>";
 			for (const ability in units[unit]["upgrade"]["abilities"]) {
 				txt += "<p class=\"unitUpgradeAbilities\">" + units[unit]["upgrade"]["abilities"][ability] + "</p>";
 			}
 			txt += "<p class=\"unitUpgradeBody\">cost: " + units[unit]["upgrade"]["cost"] + " | combat: " + units[unit]["upgrade"]["combat"] + " | move: " + units[unit]["upgrade"]["move"] + " | capacity: " + units[unit]["upgrade"]["capacity"] + "</p>";
 		}
-		txt += "<br>";
+		txt += "</div></div><br>";
 		document.getElementById("content").innerHTML += txt;
 	}
 
