@@ -5,6 +5,8 @@ body {
 
 .mainHeader {
 	text-align: center;
+	margin-left: 5%;
+	width: 90%;
 }
 
 .mainTabs button {
@@ -16,9 +18,9 @@ body {
 	display: block;
 	font-size: 1.5rem;
 	cursor: pointer;
-	width: 80%;
+	width: 90%;
 	padding: 5px;
-	margin-left:10%;
+	margin-left:5%;
 }
 
 .mainTabs button:not(:last-child) {
@@ -27,8 +29,8 @@ body {
 
 .pageContent {
 	text-align: center;
-	margin-left:10%;
-	width: 80%;
+	margin-left: 5%;
+	width: 90%;
 }
 
 .promissories {
