@@ -5,23 +5,23 @@ export const promissoryKeys = ["alliance","ceasefire","politicalSecret","support
 export const promissories = {
 	alliance:{
 		name:"Alliance",
-		desc:"When you receive this card, if you are not the [color] player, you must place it face up in your play area.<br>While this card is in your play area, you can use the [color] player's commander ability, if it is unlocked.<br>If you activate a system that contains 1 or more of the [color] player's units, return this card to the [color] player."
+		desc:"When you receive this card, if you are not the [color] player, you must place it face up in your play area.<br><br>While this card is in your play area, you can use the [color] player's commander ability, if it is unlocked.<br><br>If you activate a system that contains 1 or more of the [color] player's units, return this card to the [color] player."
 	},
 	ceasefire:{
 		name:"Ceasefire",
-		desc:"After the [color] player activates a system that contains 1 or more of your units:<br>The [color] player cannot move units into the active system.<br>Then, return this card to the [color] player."
+		desc:"After the [color] player activates a system that contains 1 or more of your units:<br><br>The [color] player cannot move units into the active system.<br><br>Then, return this card to the [color] player."
 	},
 	politicalSecret:{
 		name:"Political Secret",
-		desc:"When an agenda is revealed:<br>The [color] player cannot vote, play action cards, or use faction abilities until after that agenda has been resolved.<br>Then, return this card to the [color] player."
+		desc:"When an agenda is revealed:<br><br>The [color] player cannot vote, play action cards, or use faction abilities until after that agenda has been resolved.<br><br>Then, return this card to the [color] player."
 	},
 	supportForTheThrone:{
 		name:"Support for the Throne",
-		desc:"When you receive this card, if you are not the [color] player, you must place it face-up in your play area and gain 1 Victory Point.<br>If you activate a system that contains 1 or more of the [color] player's units or if the [color] player is eliminated, lose 1 Victory Point and return this card to the [color] player."
+		desc:"When you receive this card, if you are not the [color] player, you must place it face-up in your play area and gain 1 Victory Point.<br><br>If you activate a system that contains 1 or more of the [color] player's units or if the [color] player is eliminated, lose 1 Victory Point and return this card to the [color] player."
 	},
 	tradeAgreement:{
 		name:"Trade Agreement",
-		desc:"When the [color] player replenishes commodities:<br>The [color] player gives you all of their commodities.<br>Then, return this card to the [color] player."
+		desc:"When the [color] player replenishes commodities:<br><br>The [color] player gives you all of their commodities.<br><br>Then, return this card to the [color] player."
 	}
 };
 
@@ -32,7 +32,7 @@ export const strategies = {
 		name:"Leadership",
 		priority:"1",
 		color:"rgba(255, 0, 0, 0.3)",
-		primary:"Gain 3 command tokens.<br>Spend any amount of influence to gain 1 command token for every 3 influence spent.",
+		primary:"Gain 3 command tokens.<br><br>Spend any amount of influence to gain 1 command token for every 3 influence spent.",
 		secondary:"Spend any amount of influence to gain 1 command token for every 3 influence."
 	},
 	diplomacy:{
@@ -46,21 +46,21 @@ export const strategies = {
 		name:"Politics",
 		priority:"3",
 		color:"rgba(255, 255, 0, 0.3)",
-		primary:"Choose a player other than the speaker. That player gains the speaker token.<br>Draw 2 action cards.<br>Look at the top 2 cards of the agenda deck. Place each card on the top or bottom of the deck in any order.",
+		primary:"Choose a player other than the speaker. That player gains the speaker token.<br><br>Draw 2 action cards.<br><br>Look at the top 2 cards of the agenda deck. Place each card on the top or bottom of the deck in any order.",
 		secondary:"Spend 1 token from your strategy pool to draw 2 action cards."
 	},
 	construction:{
 		name:"Construction",
 		priority:"4",
 		color:"rgba(0, 255, 0, 0.3)",
-		primary:"Either place 1 structure on a planet you control or use the PRODUCTION ability of 1 of your space docks.<br>Place 1 structure on a planet you control.",
+		primary:"Either place 1 structure on a planet you control or use the PRODUCTION ability of 1 of your space docks.<br><br>Place 1 structure on a planet you control.",
 		secondary:"Spend 1 token from your strategy pool to place 1 structure on a planet you control."
 	},
 	trade:{
 		name:"Trade",
 		priority:"5",
 		color:"rgba(0, 255, 255, 0.3)",
-		primary:"Gain 3 trade goods.<br>Replenish commodities.<br>Choose any number of other players. Those players use the secondary ability of this strategy card without spending a command token.",
+		primary:"Gain 3 trade goods.<br><br>Replenish commodities.<br><br>Choose any number of other players. Those players use the secondary ability of this strategy card without spending a command token.",
 		secondary:"Spend 1 token from your strategy pool to replenish commodities."
 	},
 	warfare:{
@@ -74,14 +74,14 @@ export const strategies = {
 		name:"Technology",
 		priority:"7",
 		color:"rgba(0, 0, 127, 0.3)",
-		primary:"Research 1 technology.<br>Spend 6 resources to research 1 technology.",
+		primary:"Research 1 technology.<br><br>Spend 6 resources to research 1 technology.",
 		secondary:"Spend 1 token from your strategy pool and 4 resources to research 1 technology."
 	},
 	imperial:{
 		name:"Imperial",
 		priority:"8",
 		color:"rgba(127, 0, 127, 0.3)",
-		primary:"Immediately score 1 public objective if you fulfill its requirements.<br>Gain 1 Victory Point if you control Mecatol Rex; otherwise, draw 1 secret objective.",
+		primary:"Immediately score 1 public objective if you fulfill its requirements.<br><br>Gain 1 Victory Point if you control Mecatol Rex; otherwise, draw 1 secret objective.",
 		secondary:"Spend 1 token from your strategy pool to draw 1 secret objective."
 	}
 };
@@ -95,12 +95,12 @@ export const technologies = {
 		antimassDeflectors:{
 			name:"Antimass Deflectors",
 			prereq:"",
-			desc:"Your ships can move into and through asteroid fields.<br>When other players' units use SPACE CANNON against your units, apply -1 to the result of each die roll."
+			desc:"Your ships can move into and through asteroid fields.<br><br>When other players' units use SPACE CANNON against your units, apply -1 to the result of each die roll."
 		},
 		darkEnergyTap:{
 			name:"Dark Energy Tap",
 			prereq:"",
-			desc:"After you perform a tactical action in a system that contains a frontier token, if you have 1 or more ships in that system, explore that token.<br>Your ships can retreat into adjacent systems that do not contain other players' units, even if you do not have units or control planets in that system."
+			desc:"After you perform a tactical action in a system that contains a frontier token, if you have 1 or more ships in that system, explore that token.<br><br>Your ships can retreat into adjacent systems that do not contain other players' units, even if you do not have units or control planets in that system."
 		},
 		gravityDrive:{
 			name:"Gravity Drive",
@@ -134,7 +134,7 @@ export const technologies = {
 		psychoarchaeology:{
 			name:"Psychoarchaeology",
 			prereq:"",
-			desc:"You can use technology specialties on planets you control without exhausting them, even if those planets are exhausted.<br>During the action phase, you can exhaust planets you control that have technology specialties to gain 1 trade good."
+			desc:"You can use technology specialties on planets you control without exhausting them, even if those planets are exhausted.<br><br>During the action phase, you can exhaust planets you control that have technology specialties to gain 1 trade good."
 		},
 		dacxiveAnimators:{
 			name:"Dacxive Animators",
@@ -154,7 +154,7 @@ export const technologies = {
 		x89BacterialWeapon:{
 			name:"X-89 Bacterial Weapon",
 			prereq:"GGG",
-			desc:"Double the hits produced by your units' BOMBARDMENT and ground combat rolls.<br>Exhaust each planet you use BOMBARDMENT against."
+			desc:"Double the hits produced by your units' BOMBARDMENT and ground combat rolls.<br><br>Exhaust each planet you use BOMBARDMENT against."
 		}
 	},
 	warfare:{
@@ -168,17 +168,17 @@ export const technologies = {
 		aiDevelopmentAlgorithm:{
 			name:"AI Development Algorithm",
 			prereq:"",
-			desc:"When you research a unit upgrade technology, you may exhaust this card to ignore any 1 prerequisite.<br>When 1 or more of your units use PRODUCTION, you may exhaust this card to reduce the combined cost of the produced units by the number of unit upgrade technologies that you own."
+			desc:"When you research a unit upgrade technology, you may exhaust this card to ignore any 1 prerequisite.<br><br>When 1 or more of your units use PRODUCTION, you may exhaust this card to reduce the combined cost of the produced units by the number of unit upgrade technologies that you own."
 		},
 		magenDefenseGrid:{
 			name:"Magen Defense Grid",
 			prereq:"R",
-			desc:"When any play activates a system that contains 1 or more of your structures, place 1 infantry from your reinforcements with each of those structures.<br>At the start of ground combat on a planet that contains 1 or more of your structures, produce 1 hit and assign it to 1 of your opponent's ground forces."
+			desc:"When any play activates a system that contains 1 or more of your structures, place 1 infantry from your reinforcements with each of those structures.<br><br>At the start of ground combat on a planet that contains 1 or more of your structures, produce 1 hit and assign it to 1 of your opponent's ground forces."
 		},
 		selfAssemblyRoutines:{
 			name:"Self Assembly Routines",
 			prereq:"R",
-			desc:"After 1 or more of your units use PRODUCTION, you may exhaust this card to place 1 mech from your reinforcements on a planet that you control in that system.<br>after 1 of your mechs is destroyed, gain 1 trade good."
+			desc:"After 1 or more of your units use PRODUCTION, you may exhaust this card to place 1 mech from your reinforcements on a planet that you control in that system.<br><br>after 1 of your mechs is destroyed, gain 1 trade good."
 		},
 		duraniumArmor:{
 			name:"Duranium Armor",
@@ -202,7 +202,7 @@ export const technologies = {
 		scanlinkDroneNetwork:{
 			name:"Scanlink Drone Network",
 			prereq:"",
-			desc:"At the end of your turn, you may exhaust this card to redistribute your command tokens.<br>When you cast votes during the agenda phase, you may cast 3 additional votes; if you do, and the outcome you voted for is not resolved, exhaust this card."
+			desc:"At the end of your turn, you may exhaust this card to redistribute your command tokens.<br><br>When you cast votes during the agenda phase, you may cast 3 additional votes; if you do, and the outcome you voted for is not resolved, exhaust this card."
 		},
 		gravitonLaserSystem:{
 			name:"Graviton Laser System",
